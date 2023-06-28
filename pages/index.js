@@ -1,19 +1,22 @@
-import React from "react";
-import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+let main = "";
+const Index = () => {
+  const router = useRouter();
+  useEffect(() => {
+    const login = localStorage.getItem("login");
+    let main = "signup";
+    if (login === "true") {
+      main = "home";
+    }
+    if (login === "false") {
+      main = "login";
+    }
+    router.push("/" + main);
+  }, []);
 
-const index = () => {
-  return (
-    <>
-      <Head>
-        <link
-          rel="icon"
-          href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
-        />
-        <title>Next.js test</title>
-      </Head>
-      <h1>Test</h1>;
-    </>
-  );
+  return;
 };
 
-export default index;
+export default Index;
+Index.getLayout = (page) => page;

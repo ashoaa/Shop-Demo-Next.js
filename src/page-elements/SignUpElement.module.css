@@ -1,0 +1,32 @@
+.modal {
+  overflow: hidden;
+  border-radius: 15px;
+  height: auto;
+  width: 50vw;
+  background-color: #ffffff;
+  color: #1565c0;
+}
+
+.user-info {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.7rem;
+}
+
+@media screen and ((min-width: 451px) and (max-width: 768px)) {
+  .modal {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 85vw;
+  }
+}
