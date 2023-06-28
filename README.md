@@ -1,4 +1,4 @@
-# Shop-Demo
+# Shop-Demo (Next.js)
 
 Responsive shop demo with sign-up and login forms designed by Material UI and including different routes using Next.js.
 
