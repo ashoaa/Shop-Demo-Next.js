@@ -8,7 +8,11 @@ export const itemSlice = createSlice({
   initialState: initialItemState,
   reducers: {
     setInitialCount: (state) => {
-      state.count = parseInt(localStorage.getItem("count"));
+      if (localStorage.getItem("count")) {
+        state.count = parseInt(localStorage.getItem("count"));
+      } else {
+        state.count = 0;
+      }
     },
     addItem: (state) => {
       state.count++;
